@@ -1,0 +1,38 @@
+{
+  "name": "sapphire-presets",
+  "private": false,
+  "version": "0.4.0",
+  "description": "Predefined reusable collections of Content Schemas for Sapphire CMS.",
+  "author": "Alexei KLENIN",
+  "license": "Apache-2.0",
+  "homepage": "https://sapphire-cms.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphire-cms/sapphire-presets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sapphire-cms/sapphire-presets/issues"
+  },
+  "keywords": [
+    "sapphire",
+    "cms",
+    "schemas",
+    "presets"
+  ],
+  "workspaces": [],
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lerna": "^8.2.1",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "scripts": {
+    "link": "lerna run link --stream",
+    "publish:local": "lerna run publish:local --stream",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,md,yml,yaml}": "prettier --write"
+  }
+}
