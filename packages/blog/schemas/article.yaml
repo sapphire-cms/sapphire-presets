@@ -1,0 +1,237 @@
+name: article
+label: Article
+type: collection
+description: >
+  Editorial content such as blog posts, news articles,
+  tutorials, reviews, interviews and opinion pieces.
+
+fields:
+  # Content
+
+  - name: title
+    label: Title
+    type: text
+    required: true
+    description: Main title of the article.
+
+  - name: subtitle
+    label: Subtitle
+    type: text
+    description: Secondary title providing additional context.
+
+  - name: excerpt
+    label: Excerpt
+    type: text
+    description: Short summary displayed in article listings and previews.
+
+  - name: body
+    label: Body
+    type: rich-text
+    required: true
+    description: Main editorial content of the article.
+
+  - name: summary
+    label: Summary
+    type: rich-text
+    description: Concise overview of the main points of the article.
+
+  # Media
+
+  - name: cover-image
+    label: Cover Image
+    type: media
+    description: Main image displayed at the top of the article.
+
+  - name: thumbnail
+    label: Thumbnail
+    type: media
+    description: Alternative image used in article cards and listings.
+
+  # Authorship
+
+  - name: authors
+    label: Authors
+    type:
+      name: reference
+      params:
+        store: author
+    isList: true
+    description: Authors responsible for writing the article.
+
+  - name: editors
+    label: Editors
+    type:
+      name: reference
+      params:
+        store: author
+    isList: true
+    description: Contributors responsible for editing or reviewing the article.
+
+  # Classification
+
+  - name: categories
+    label: Categories
+    type:
+      name: reference
+      params:
+        store: category
+    isList: true
+    description: Categories under which the article is classified.
+
+  - name: tags
+    label: Tags
+    type:
+      name: reference
+      params:
+        store: tag
+    isList: true
+    description: Tags describing the topics covered by the article.
+
+  - name: series
+    label: Series
+    type:
+      name: reference
+      params:
+        store: series
+    description: Editorial series to which the article belongs.
+
+  - name: series-order
+    label: Series Order
+    type: number
+    description: Position of the article within its series.
+
+  # Publication
+
+  - name: publication-date
+    label: Publication Date
+    # TODO: change type to date-time
+    type: text
+    description: Editorial publication date displayed to readers.
+
+  - name: updated-date
+    label: Updated Date
+    # TODO: change type to date-time
+    type: text
+    description: Date of the last significant editorial revision.
+
+  - name: featured
+    label: Featured
+    type: check
+    description: Whether to highlight the article in editorial listings.
+
+  - name: pinned
+    label: Pinned
+    type: check
+    description: Whether to keep the article at the top of article listings.
+
+  - name: reading-time
+    label: Reading Time
+    type: number
+    description: Estimated reading time in minutes.
+    validation:
+      - integer
+      - positive
+
+  # Related content
+
+  - name: related-articles
+    label: Related Articles
+    type:
+      name: reference
+      params:
+        store: article
+    isList: true
+    description: Manually selected articles recommended to readers.
+
+  - name: sources
+    label: Sources
+    type: group
+    isList: true
+    description: External sources and references used in the article.
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+        description: Title of the referenced source.
+
+      - name: url
+        label: URL
+        # TODO: change type to url
+        type: text
+        required: true
+        description: URL of the referenced source.
+
+      - name: author
+        label: Author
+        type: text
+        description: Author or organization responsible for the source.
+
+      - name: publication-date
+        label: Publication Date
+        # TODO: change type to date
+        type: text
+        description: Date when the source was originally published.
+
+  # Rights and attribution
+
+  - name: copyright
+    label: Copyright
+    type: text
+    description: Copyright notice associated with the article.
+
+  - name: license
+    label: License
+    type: text
+    description: License under which the article is distributed.
+
+  - name: original-url
+    label: Original URL
+    # TODO: change type to url
+    type: text
+    description: URL where the article was originally published.
+
+  # Search engine optimization
+
+  - name: seo-title
+    label: SEO Title
+    type: text
+    description: Custom page title for search engines.
+
+  - name: seo-description
+    label: SEO Description
+    type: text
+    description: Meta description for search engine results.
+
+  - name: canonical-url
+    label: Canonical URL
+    # TODO: change type to url
+    type: text
+    description: Preferred canonical URL of the article.
+
+  - name: no-index
+    label: No Index
+    type: check
+    description: Whether search engines should avoid indexing the article.
+
+  - name: no-follow
+    label: No Follow
+    type: check
+    description: Whether search engines should avoid following links on the article page.
+
+  # Social sharing
+
+  - name: social-title
+    label: Social Title
+    type: text
+    description: Alternative title used when sharing the article on social platforms.
+
+  - name: social-description
+    label: Social Description
+    type: text
+    description: Alternative description used in social sharing previews.
+
+  - name: social-image
+    label: Social Image
+    type: media
+    description: Alternative image used in social sharing previews.

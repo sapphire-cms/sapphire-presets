@@ -1,0 +1,36 @@
+name: tag
+label: Tag
+description: A reusable label for classifying and discovering blog articles.
+type: collection
+
+fields:
+  - name: name
+    label: Name
+    type: text
+    required: true
+    description: Human-readable name of the tag.
+
+  - name: description
+    label: Description
+    type: text
+    description: Short description of the topic represented by this tag.
+
+  - name: color
+    label: Color
+    type: text
+    description: Color used to visually distinguish the tag, typically a hexadecimal color code.
+
+  - name: icon
+    label: Icon
+    type: text
+    description: Optional icon identifier used when displaying the tag.
+
+  - name: seo-title
+    label: SEO Title
+    type: text
+    description: Custom page title for the tag's archive page.
+
+  - name: seo-description
+    label: SEO Description
+    type: text
+    description: Meta description for the tag's archive page.

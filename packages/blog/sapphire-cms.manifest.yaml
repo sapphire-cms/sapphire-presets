@@ -1,0 +1,8 @@
+presets:
+  - name: blog
+    schemas:
+      - ./schemas/article.yaml
+      - ./schemas/author.yaml
+      - ./schemas/category.yaml
+      - ./schemas/series.yaml
+      - ./schemas/tag.yaml

@@ -1,0 +1,99 @@
+name: series
+label: Series
+type: collection
+description: >
+  An ordered collection of related blog articles,
+  such as tutorials, educational courses, multi-part
+  stories, or recurring editorial features.
+
+fields:
+  - name: title
+    label: Title
+    type: text
+    required: true
+    description: Public title of the series.
+
+  - name: subtitle
+    label: Subtitle
+    type: text
+    description: Optional subtitle providing additional context.
+
+  - name: description
+    label: Description
+    type: text
+    description: Short summary displayed on series cards and listings.
+
+  - name: introduction
+    label: Introduction
+    type: rich-text
+    description: >
+      Detailed introduction to the series, its objectives,
+      intended audience, and covered topics.
+
+  - name: cover-image
+    label: Cover Image
+    type: media
+    description: Main image representing the series.
+
+  - name: thumbnail
+    label: Thumbnail
+    type: media
+    description: Compact image used in series listings.
+
+  - name: authors
+    label: Authors
+    type:
+      name: reference
+      params:
+        store: author
+    isList: true
+    description: Authors or contributors responsible for the series.
+
+  - name: difficulty
+    label: Difficulty
+    type: text
+    description: >
+      Intended difficulty level, such as beginner,
+      intermediate, or advanced.
+
+  - name: estimated-duration
+    label: Estimated Duration
+    type: number
+    description: Estimated time in minutes to complete the entire series.
+    validation:
+      - integer
+      - positive
+
+  - name: completed
+    label: Completed
+    type: check
+    description: >
+      Indicates whether the series is finished
+      or additional articles are expected.
+
+  - name: featured
+    label: Featured
+    type: check
+    description: Whether to highlight the series in editorial listings.
+
+  - name: start-date
+    label: Start Date
+    # TODO: change type to date
+    type: text
+    description: Date when the series began publication.
+
+  - name: end-date
+    label: End Date
+    # TODO: change type to date
+    type: text
+    description: Date when the series was completed.
+
+  - name: seo-title
+    label: SEO Title
+    type: text
+    description: Custom page title for the series landing page.
+
+  - name: seo-description
+    label: SEO Description
+    type: text
+    description: Meta description for the series landing page.

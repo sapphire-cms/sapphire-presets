@@ -5,10 +5,12 @@
 
 # Sapphire Presets
 
-A **Sapphire preset** is a package that provides predefined reusable content schemas, 
+A **Sapphire preset** is a package that provides predefined reusable content schemas,
 allowing developers to start creating content immediately without designing their own content types.
 
 # Provided Collections
+
+- [blog](packages/blog)
 
 # License
 

@@ -19,7 +19,9 @@
     "schemas",
     "presets"
   ],
-  "workspaces": [],
+  "workspaces": [
+    "packages/blog"
+  ],
   "devDependencies": {
     "husky": "^9.1.7",
     "lerna": "^8.2.1",
@@ -28,9 +30,7 @@
     "yalc": "^1.0.0-pre.53"
   },
   "scripts": {
-    "link": "lerna run link --stream",
-    "publish:local": "lerna run publish:local --stream",
-    "prepare": "husky"
+    "publish:local": "lerna run publish:local --stream"
   },
   "lint-staged": {
     "*.{js,ts,tsx,json,md,yml,yaml}": "prettier --write"

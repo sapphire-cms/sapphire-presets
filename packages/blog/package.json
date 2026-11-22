@@ -1,0 +1,28 @@
+{
+  "name": "@sapphire-cms/preset-blog",
+  "private": false,
+  "version": "0.4.0",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Preset for general blog.",
+  "main": "sapphire-cms.manifest.yaml",
+  "exports": {
+    "default": "./sapphire-cms.manifest.yaml"
+  },
+  "author": "Alexei KLENIN",
+  "license": "Apache-2.0",
+  "homepage": "https://sapphire-cms.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapphire-cms/sapphire-presets.git",
+    "directory": "packages/blog"
+  },
+  "bugs": {
+    "url": "https://github.com/sapphire-cms/sapphire-presets/issues"
+  },
+  "scripts": {
+    "publish:local": "yalc publish"
+  }
+}

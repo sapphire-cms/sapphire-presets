@@ -1,0 +1,70 @@
+name: category
+label: Category
+type: tree
+description: A hierarchical classification of blog articles.
+
+fields:
+  - name: name
+    label: Name
+    type: text
+    required: true
+    description: Human-readable name of the category.
+
+  - name: subtitle
+    label: Subtitle
+    type: text
+    description: Optional subtitle providing additional context.
+
+  - name: description
+    label: Description
+    type: text
+    description: Short description displayed in category listings.
+
+  - name: introduction
+    label: Introduction
+    type: rich-text
+    description: Detailed introduction displayed on the category landing page.
+
+  - name: cover-image
+    label: Cover Image
+    type: media
+    description: Main image representing the category.
+
+  - name: thumbnail
+    label: Thumbnail
+    type: media
+    description: Compact image used in category listings.
+
+  - name: color
+    label: Color
+    type: text
+    description: Color used to visually distinguish the category, typically a hexadecimal color code.
+
+  - name: icon
+    label: Icon
+    type: text
+    description: Optional icon identifier used when displaying the category.
+
+  - name: featured
+    label: Featured
+    type: check
+    description: Whether to highlight the category in editorial listings.
+
+  - name: featured-series
+    label: Featured Series
+    type:
+      name: reference
+      params:
+        store: series
+    isList: true
+    description: Article series highlighted on the category landing page.
+
+  - name: seo-title
+    label: SEO Title
+    type: text
+    description: Custom page title for the category landing page.
+
+  - name: seo-description
+    label: SEO Description
+    type: text
+    description: Meta description for the category landing page.
